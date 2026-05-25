@@ -9,42 +9,52 @@
 
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: #F0F2F5;
+    background: #F5F0E8;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
 
   header {
-    background: #1E3A6E;
+    background: #8B3A1A;
     color: white;
-    padding: 0 2rem;
-    height: 64px;
+    padding: 1.25rem 2rem 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 14px;
-    box-shadow: 0 2px 8px rgba(30,58,110,0.25);
+    text-align: center;
+    gap: 4px;
+    box-shadow: 0 2px 8px rgba(100,40,10,0.25);
     flex-shrink: 0;
   }
   .logo-circle {
-    width: 38px; height: 38px;
+    width: 42px; height: 42px;
     background: rgba(255,255,255,0.15);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
+    font-size: 20px;
+    margin-bottom: 4px;
   }
-  header h1 { font-size: 17px; font-weight: 600; letter-spacing: -0.2px; }
-  header p  { font-size: 12px; opacity: 0.65; margin-top: 1px; }
+  header h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.2px; }
+  header p  { font-size: 12px; opacity: 0.7; margin-top: 1px; }
+  .header-hint {
+    font-size: 12px;
+    opacity: 0.85;
+    margin-top: 6px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 4px 14px;
+  }
   .badge {
-    margin-left: auto;
     background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 20px;
     font-size: 11px;
-    padding: 4px 12px;
+    padding: 3px 11px;
     opacity: 0.85;
     white-space: nowrap;
+    margin-top: 4px;
   }
 
   main {
@@ -62,7 +72,7 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #6B7280;
+    color: #7A5C3A;
     margin-bottom: 8px;
   }
   .chips {
@@ -73,28 +83,28 @@
   }
   .chip {
     background: white;
-    border: 1px solid #D1D5DB;
+    border: 1px solid #D4B896;
     border-radius: 20px;
     padding: 6px 14px;
     font-size: 12.5px;
-    color: #1E3A6E;
+    color: #7A3A10;
     cursor: pointer;
     transition: background 0.15s, border-color 0.15s, color 0.15s;
     white-space: nowrap;
     user-select: none;
   }
-  .chip:hover { background: #1E3A6E; color: white; border-color: #1E3A6E; }
+  .chip:hover { background: #8B3A1A; color: white; border-color: #8B3A1A; }
 
   .chat-wrap {
     background: white;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #E8D5BC;
     border-radius: 14px;
     display: flex;
     flex-direction: column;
     flex: 1;
     min-height: 0;
     overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 4px rgba(100,50,10,0.08);
   }
 
   .chat-body {
@@ -121,13 +131,13 @@
   }
   .empty-icon {
     width: 56px; height: 56px;
-    background: #F3F4F6;
+    background: #F0E6D6;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: 26px;
   }
-  .empty h2 { font-size: 16px; font-weight: 500; color: #374151; }
-  .empty p  { font-size: 13px; text-align: center; max-width: 300px; line-height: 1.5; }
+  .empty h2 { font-size: 16px; font-weight: 500; color: #5C3D20; }
+  .empty p  { font-size: 13px; text-align: center; max-width: 300px; line-height: 1.5; color: #9A7A5A; }
 
   .msg { display: flex; flex-direction: column; gap: 3px; animation: fadeUp 0.2s ease; }
   @keyframes fadeUp {
@@ -153,18 +163,18 @@
     word-break: break-word;
   }
   .bubble-user {
-    background: #1E3A6E;
+    background: #8B3A1A;
     color: white;
     border-radius: 14px 14px 4px 14px;
   }
   .bubble-ai {
-    background: #F8FAFC;
-    border: 1px solid #E5E7EB;
-    color: #1F2937;
+    background: #FDF7F0;
+    border: 1px solid #E8D5BC;
+    color: #3D2010;
     border-radius: 14px 14px 14px 4px;
   }
   .bubble-ai.thinking {
-    color: #9CA3AF;
+    color: #B89A78;
     font-style: italic;
   }
   .bubble-ai.error {
@@ -174,18 +184,18 @@
   }
 
   .input-bar {
-    border-top: 1px solid #E5E7EB;
+    border-top: 1px solid #E8D5BC;
     padding: 12px 16px;
     display: flex;
     gap: 10px;
     align-items: flex-end;
-    background: #FAFAFA;
+    background: #FBF5EC;
     border-radius: 0 0 14px 14px;
   }
   textarea {
     flex: 1;
     padding: 10px 14px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid #D4B896;
     border-radius: 10px;
     font-family: inherit;
     font-size: 14px;
@@ -194,16 +204,16 @@
     max-height: 130px;
     line-height: 1.5;
     background: white;
-    color: #111827;
+    color: #3D2010;
     outline: none;
     transition: border-color 0.15s;
   }
-  textarea:focus { border-color: #1E3A6E; }
-  textarea::placeholder { color: #9CA3AF; }
+  textarea:focus { border-color: #8B3A1A; }
+  textarea::placeholder { color: #B89A78; }
 
   .send-btn {
     width: 44px; height: 44px;
-    background: #1E3A6E;
+    background: #8B3A1A;
     color: white;
     border: none;
     border-radius: 10px;
@@ -220,8 +230,8 @@
   .mic-btn {
     width: 44px; height: 44px;
     background: white;
-    color: #1E3A6E;
-    border: 1.5px solid #D1D5DB;
+    color: #8B3A1A;
+    border: 1.5px solid #D4B896;
     border-radius: 10px;
     cursor: pointer;
     display: flex; align-items: center; justify-content: center;
@@ -230,7 +240,7 @@
     transition: all 0.15s;
     position: relative;
   }
-  .mic-btn:hover { border-color: #1E3A6E; background: #F0F4FA; }
+  .mic-btn:hover { border-color: #8B3A1A; background: #FDF0E6; }
   .mic-btn.listening {
     background: #FEE2E2;
     border-color: #EF4444;
@@ -258,20 +268,19 @@
   footer {
     text-align: center;
     font-size: 11px;
-    color: #9CA3AF;
+    color: #9A7A5A;
     padding: 10px 0 16px;
   }
-  footer a { color: #9CA3AF; }
+  footer a { color: #9A7A5A; }
 </style>
 </head>
 <body>
 
 <header>
   <div class="logo-circle">☀️</div>
-  <div>
-    <h1>SCOV Resident Assistant</h1>
-    <p>Sun City Oro Valley Community Association</p>
-  </div>
+  <h1>SCOV Resident Assistant</h1>
+  <p>Sun City Oro Valley Community Association</p>
+  <span class="header-hint">Type your question below or click 🎤 to speak</span>
   <span class="badge">2025 Handbook</span>
 </header>
 
